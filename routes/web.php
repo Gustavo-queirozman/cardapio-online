@@ -14,4 +14,4 @@ use App\Http\Controllers\Empresa\MostrarEmpresaController;
 |
 */
 
-Route::get('/{slug}',[MostrarEmpresaController::class]);
+Route::get('/{slug}',[MostrarEmpresaController::class, 'show']);
