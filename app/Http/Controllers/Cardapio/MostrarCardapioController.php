@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MostrarCardapioController extends Controller
 {
     public function show(Request $request, $slug){
-        $empresa = Empresa::where('slug', $slug);
+        $empresa = Empresa::where('slug_nome_empresa', $slug)->first();
         dd($empresa->getAttributes());
     }
 }
