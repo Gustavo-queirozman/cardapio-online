@@ -17,7 +17,7 @@ class Empresa extends Model
         'rua',
         'bairro',
         'numero',
-        'slug',
+        'slug_nome_empresa',
         'tipo_empresa',
     ];
 
