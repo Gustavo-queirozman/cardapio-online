@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\Cardapio;
 
 use App\Http\Controllers\Controller;
-use App\Models\Empresa;
 use Illuminate\Http\Request;
 
-class CardapioController extends Controller
+class MostrarCardapioController extends Controller
 {
-    //
     public function show(Request $request, $slug){
         $empresa = Empresa::where('slug', $slug);
         dd($empresa);
