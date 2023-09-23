@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Empresa\MostrarEmpresaController;
+use App\Http\Controllers\Cardapio\MostrarCardapioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,4 @@ use App\Http\Controllers\Empresa\MostrarEmpresaController;
 |
 */
 
-Route::get('/{slug}',[MostrarEmpresaController::class, 'show']);
+Route::get('/{slug}',[MostrarCardapioController::class, 'show']);
