@@ -9,13 +9,14 @@ use Illuminate\Http\Request;
 
 class MostrarCardapioController extends Controller
 {
-    public function show(Request $request, $slug){
-        $empresa = Empresa::where('slug_nome_empresa', $slug)->first();
-        $id_empresa = $empresa->getAttributes()['id'];
-
-        $produtos = Produto::where('fk_empresa', $id_empresa)->get();
-        for($i=0;$i<=$produtos->count();$i++){
-            dd($produtos[$i]->getAttributes());
+    public function show(Request $request, $slug)
+    {
+        $empresa = Empresa::where('slug_nome_empresa', $slug)->firstOrFail();
+        $produtos = Produto::where('fk_empresa', $empresa->id)->get();
+        for ($i = 0; $i <= $produtos->count(); $i++) {
+            $produto = $produtos[$i]->getAttributes();
+            echo json_encode($produto,true);
         }
+        return view('cardapio.mostrar', compact('empresa', 'produtos'));
     }
 }
