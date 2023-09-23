@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Cardapio;
 
 use App\Http\Controllers\Controller;
+use App\Models\Empresa;
 use Illuminate\Http\Request;
 
 class MostrarCardapioController extends Controller
