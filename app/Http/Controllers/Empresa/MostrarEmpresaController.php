@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Empresa;
 
 use App\Http\Controllers\Controller;
+use App\Models\Empresa;
 use Illuminate\Http\Request;
 
 class MostrarEmpresaController extends Controller
@@ -12,8 +13,7 @@ class MostrarEmpresaController extends Controller
      */
     public function show(Request $request, $slug)
     {
-        
-        dd($slug);
-       // $empresa = Empresa::where('slug',);
+       $empresa = Empresa::where('slug', $slug);
+       dd($empresa);
     }
 }
