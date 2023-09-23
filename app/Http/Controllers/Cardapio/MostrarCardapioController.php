@@ -10,6 +10,6 @@ class MostrarCardapioController extends Controller
 {
     public function show(Request $request, $slug){
         $empresa = Empresa::where('slug', $slug);
-        dd($empresa);
+        dd($empresa->getAttributes());
     }
 }
