@@ -801,7 +801,7 @@
                                 <span class="menu-category-tag">{{ $categoria }}</span>
                             </div>
                             <div class="menu-content">
-                                <h3 class="menu-name">{{ $produto->nome }}</h3>
+                                <h3 class="menu-name">{{ $produto->nome_produto }}</h3>
                                 <p class="menu-description">{{ $produto->descricao }}</p>
                                 <div class="menu-action">
                                     <span class="menu-price">
