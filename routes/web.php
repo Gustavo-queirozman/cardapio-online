@@ -14,4 +14,10 @@ use App\Http\Controllers\Cardapio\MostrarCardapioController;
 |
 */
 
+
+Route::get('/', function(){
+    return view('welcome');
+});
+
+
 Route::get('/{slug}',[MostrarCardapioController::class, 'show']);
